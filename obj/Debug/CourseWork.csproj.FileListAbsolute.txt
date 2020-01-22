@@ -22,3 +22,15 @@ C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\Stu
 C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation\obj\Debug\CourseWork.csproj.CopyComplete
 C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation\obj\Debug\CourseWork.exe
 C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation\obj\Debug\CourseWork.pdb
+C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation-master\StudentInformation-master\bin\Debug\CourseWork.exe.config
+C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation-master\StudentInformation-master\bin\Debug\CourseWork.exe
+C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation-master\StudentInformation-master\bin\Debug\CourseWork.pdb
+C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation-master\StudentInformation-master\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation-master\StudentInformation-master\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation-master\StudentInformation-master\obj\Debug\CourseWork.csprojAssemblyReference.cache
+C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation-master\StudentInformation-master\obj\Debug\CourseWork.Properties.Resources.resources
+C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation-master\StudentInformation-master\obj\Debug\CourseWork.StudentForm.resources
+C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation-master\StudentInformation-master\obj\Debug\CourseWork.csproj.GenerateResource.cache
+C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation-master\StudentInformation-master\obj\Debug\CourseWork.csproj.CopyComplete
+C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation-master\StudentInformation-master\obj\Debug\CourseWork.exe
+C:\Users\Himadri\OneDrive\Documents\Islington\Year 3\ApplicationDevelopement\StudentInformation-master\StudentInformation-master\obj\Debug\CourseWork.pdb

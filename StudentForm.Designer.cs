@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMain = new System.Windows.Forms.Panel();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -53,6 +53,7 @@
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panelStudent = new System.Windows.Forms.Panel();
+            this.btnSortByDate = new System.Windows.Forms.Button();
             this.lblGender = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblCourse = new System.Windows.Forms.Label();
@@ -75,6 +76,7 @@
             this.comboCourse = new System.Windows.Forms.ComboBox();
             this.lblStudentInformation = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
+            this.btnSortByName = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.fnameErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.addressErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
@@ -84,12 +86,10 @@
             this.contactErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.courseErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelReport = new System.Windows.Forms.Panel();
-            this.dataGridReport = new System.Windows.Forms.DataGridView();
-            this.lblWeeklyReport = new System.Windows.Forms.Label();
-            this.dpReport = new System.Windows.Forms.DateTimePicker();
             this.btnGenerateReport = new System.Windows.Forms.Button();
-            this.btnSortByDate = new System.Windows.Forms.Button();
-            this.btnSortByName = new System.Windows.Forms.Button();
+            this.dpReport = new System.Windows.Forms.DateTimePicker();
+            this.lblWeeklyReport = new System.Windows.Forms.Label();
+            this.dataGridReport = new System.Windows.Forms.DataGridView();
             this.panelMain.SuspendLayout();
             this.panelChart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartWeeklyReport)).BeginInit();
@@ -203,51 +203,51 @@
             this.chartWeeklyReport.BorderSkin.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartWeeklyReport.BorderSkin.BorderWidth = 0;
             this.chartWeeklyReport.BorderSkin.PageColor = System.Drawing.Color.Transparent;
-            chartArea7.BackColor = System.Drawing.Color.Transparent;
-            chartArea7.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            chartArea7.BorderColor = System.Drawing.Color.Transparent;
-            chartArea7.Name = "ChartArea1";
-            this.chartWeeklyReport.ChartAreas.Add(chartArea7);
+            chartArea1.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            chartArea1.BorderColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chartWeeklyReport.ChartAreas.Add(chartArea1);
             this.chartWeeklyReport.Cursor = System.Windows.Forms.Cursors.Default;
             this.chartWeeklyReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend7.BackColor = System.Drawing.Color.Transparent;
-            legend7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            legend7.HeaderSeparatorColor = System.Drawing.Color.Transparent;
-            legend7.InterlacedRowsColor = System.Drawing.Color.Transparent;
-            legend7.IsTextAutoFit = false;
-            legend7.ItemColumnSeparatorColor = System.Drawing.Color.Transparent;
-            legend7.Name = "Legend1";
-            legend7.TitleBackColor = System.Drawing.Color.Transparent;
-            legend7.TitleFont = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend7.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            this.chartWeeklyReport.Legends.Add(legend7);
+            legend1.BackColor = System.Drawing.Color.Transparent;
+            legend1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            legend1.HeaderSeparatorColor = System.Drawing.Color.Transparent;
+            legend1.InterlacedRowsColor = System.Drawing.Color.Transparent;
+            legend1.IsTextAutoFit = false;
+            legend1.ItemColumnSeparatorColor = System.Drawing.Color.Transparent;
+            legend1.Name = "Legend1";
+            legend1.TitleBackColor = System.Drawing.Color.Transparent;
+            legend1.TitleFont = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            this.chartWeeklyReport.Legends.Add(legend1);
             this.chartWeeklyReport.Location = new System.Drawing.Point(0, 0);
             this.chartWeeklyReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chartWeeklyReport.Name = "chartWeeklyReport";
             this.chartWeeklyReport.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series7.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series7.CustomProperties = "BarLabelStyle=Center, DrawingStyle=Cylinder";
-            series7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series7.LabelBorderWidth = 0;
-            series7.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            series7.Legend = "Legend1";
-            series7.MarkerBorderWidth = 0;
-            series7.MarkerSize = 0;
-            series7.Name = "Students";
-            this.chartWeeklyReport.Series.Add(series7);
+            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series1.CustomProperties = "BarLabelStyle=Center, DrawingStyle=Cylinder";
+            series1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.LabelBorderWidth = 0;
+            series1.LabelForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            series1.Legend = "Legend1";
+            series1.MarkerBorderWidth = 0;
+            series1.MarkerSize = 0;
+            series1.Name = "Students";
+            this.chartWeeklyReport.Series.Add(series1);
             this.chartWeeklyReport.Size = new System.Drawing.Size(790, 348);
             this.chartWeeklyReport.TabIndex = 16;
             this.chartWeeklyReport.Text = "Weekly Report";
-            title7.Alignment = System.Drawing.ContentAlignment.TopCenter;
-            title7.BackColor = System.Drawing.Color.Transparent;
-            title7.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            title7.Name = "Title1";
-            title7.Text = "Weekly Enrollment Report";
-            this.chartWeeklyReport.Titles.Add(title7);
+            title1.Alignment = System.Drawing.ContentAlignment.TopCenter;
+            title1.BackColor = System.Drawing.Color.Transparent;
+            title1.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            title1.Name = "Title1";
+            title1.Text = "Weekly Enrollment Report";
+            this.chartWeeklyReport.Titles.Add(title1);
             // 
             // panelDataGrid
             // 
@@ -273,36 +273,36 @@
             // 
             this.dataGridStudents.AllowUserToResizeColumns = false;
             this.dataGridStudents.AllowUserToResizeRows = false;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridStudents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridStudents.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridStudents.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
             this.dataGridStudents.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridStudents.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridStudents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(112)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(112)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridStudents.ColumnHeadersHeight = 35;
             this.dataGridStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Edit,
             this.Delete});
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridStudents.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridStudents.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridStudents.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridStudents.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridStudents.EnableHeadersVisualStyles = false;
@@ -366,6 +366,20 @@
             this.panelStudent.Name = "panelStudent";
             this.panelStudent.Size = new System.Drawing.Size(790, 348);
             this.panelStudent.TabIndex = 18;
+            // 
+            // btnSortByDate
+            // 
+            this.btnSortByDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSortByDate.Image = ((System.Drawing.Image)(resources.GetObject("btnSortByDate.Image")));
+            this.btnSortByDate.Location = new System.Drawing.Point(254, 281);
+            this.btnSortByDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSortByDate.Name = "btnSortByDate";
+            this.btnSortByDate.Size = new System.Drawing.Size(113, 42);
+            this.btnSortByDate.TabIndex = 20;
+            this.btnSortByDate.Text = "Sort by Enroll Date";
+            this.btnSortByDate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSortByDate.UseVisualStyleBackColor = true;
+            this.btnSortByDate.Click += new System.EventHandler(this.btnSortByDate_Click);
             // 
             // lblGender
             // 
@@ -628,6 +642,20 @@
             this.lblID.Text = "ID";
             this.lblID.Visible = false;
             // 
+            // btnSortByName
+            // 
+            this.btnSortByName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSortByName.Image = ((System.Drawing.Image)(resources.GetObject("btnSortByName.Image")));
+            this.btnSortByName.Location = new System.Drawing.Point(119, 281);
+            this.btnSortByName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSortByName.Name = "btnSortByName";
+            this.btnSortByName.Size = new System.Drawing.Size(113, 42);
+            this.btnSortByName.TabIndex = 21;
+            this.btnSortByName.Text = "Sort by Name";
+            this.btnSortByName.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSortByName.UseVisualStyleBackColor = true;
+            this.btnSortByName.Click += new System.EventHandler(this.btnSortByName_Click);
+            // 
             // btnCancel
             // 
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -689,57 +717,6 @@
             this.panelReport.Size = new System.Drawing.Size(790, 348);
             this.panelReport.TabIndex = 24;
             // 
-            // dataGridReport
-            // 
-            this.dataGridReport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
-            this.dataGridReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(112)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
-            this.dataGridReport.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridReport.DefaultCellStyle = dataGridViewCellStyle35;
-            this.dataGridReport.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridReport.Location = new System.Drawing.Point(294, 130);
-            this.dataGridReport.Name = "dataGridReport";
-            this.dataGridReport.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridReport.RowHeadersVisible = false;
-            this.dataGridReport.Size = new System.Drawing.Size(237, 173);
-            this.dataGridReport.TabIndex = 0;
-            // 
-            // lblWeeklyReport
-            // 
-            this.lblWeeklyReport.AutoSize = true;
-            this.lblWeeklyReport.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeeklyReport.Location = new System.Drawing.Point(245, 9);
-            this.lblWeeklyReport.Name = "lblWeeklyReport";
-            this.lblWeeklyReport.Size = new System.Drawing.Size(305, 33);
-            this.lblWeeklyReport.TabIndex = 17;
-            this.lblWeeklyReport.Text = "Generate Weekly Report";
-            // 
-            // dpReport
-            // 
-            this.dpReport.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dpReport.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpReport.Location = new System.Drawing.Point(206, 72);
-            this.dpReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dpReport.Name = "dpReport";
-            this.dpReport.Size = new System.Drawing.Size(161, 21);
-            this.dpReport.TabIndex = 18;
-            this.dpReport.Value = new System.DateTime(2020, 1, 5, 3, 41, 43, 0);
-            // 
             // btnGenerateReport
             // 
             this.btnGenerateReport.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -752,35 +729,58 @@
             this.btnGenerateReport.Text = "Generate Report";
             this.btnGenerateReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnGenerateReport.UseVisualStyleBackColor = true;
-            this.btnGenerateReport.Click += new System.EventHandler(this.button1_Click);
+            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
             // 
-            // btnSortByDate
+            // dpReport
             // 
-            this.btnSortByDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSortByDate.Image = ((System.Drawing.Image)(resources.GetObject("btnSortByDate.Image")));
-            this.btnSortByDate.Location = new System.Drawing.Point(254, 281);
-            this.btnSortByDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSortByDate.Name = "btnSortByDate";
-            this.btnSortByDate.Size = new System.Drawing.Size(113, 42);
-            this.btnSortByDate.TabIndex = 20;
-            this.btnSortByDate.Text = "Sort by Enroll Date";
-            this.btnSortByDate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnSortByDate.UseVisualStyleBackColor = true;
-            this.btnSortByDate.Click += new System.EventHandler(this.btnSortByDate_Click);
+            this.dpReport.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dpReport.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpReport.Location = new System.Drawing.Point(206, 72);
+            this.dpReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dpReport.Name = "dpReport";
+            this.dpReport.Size = new System.Drawing.Size(161, 21);
+            this.dpReport.TabIndex = 18;
+            this.dpReport.Value = new System.DateTime(2020, 1, 5, 3, 41, 43, 0);
             // 
-            // btnSortByName
+            // lblWeeklyReport
             // 
-            this.btnSortByName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSortByName.Image = ((System.Drawing.Image)(resources.GetObject("btnSortByName.Image")));
-            this.btnSortByName.Location = new System.Drawing.Point(119, 281);
-            this.btnSortByName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSortByName.Name = "btnSortByName";
-            this.btnSortByName.Size = new System.Drawing.Size(113, 42);
-            this.btnSortByName.TabIndex = 21;
-            this.btnSortByName.Text = "Sort by Name";
-            this.btnSortByName.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnSortByName.UseVisualStyleBackColor = true;
-            this.btnSortByName.Click += new System.EventHandler(this.btnSortByName_Click);
+            this.lblWeeklyReport.AutoSize = true;
+            this.lblWeeklyReport.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeeklyReport.Location = new System.Drawing.Point(245, 9);
+            this.lblWeeklyReport.Name = "lblWeeklyReport";
+            this.lblWeeklyReport.Size = new System.Drawing.Size(305, 33);
+            this.lblWeeklyReport.TabIndex = 17;
+            this.lblWeeklyReport.Text = "Generate Weekly Report";
+            // 
+            // dataGridReport
+            // 
+            this.dataGridReport.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(44)))), ((int)(((byte)(51)))));
+            this.dataGridReport.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridReport.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(112)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridReport.ColumnHeadersHeight = 35;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(120)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridReport.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridReport.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridReport.Location = new System.Drawing.Point(294, 130);
+            this.dataGridReport.Name = "dataGridReport";
+            this.dataGridReport.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridReport.RowHeadersVisible = false;
+            this.dataGridReport.Size = new System.Drawing.Size(237, 173);
+            this.dataGridReport.TabIndex = 0;
             // 
             // StudentForm
             // 

@@ -49,19 +49,24 @@ namespace CourseWork
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Student obj = new Student();
-            string firstName = txtFirstName.Text;
-            string lastName = txtLastName.Text;
-            obj.Name = firstName + " " + lastName;
-            obj.Address = txtAddress.Text;
-            obj.Email = txtEmail.Text;
-            obj.EnrollDate = dateEnrolDate.Value;
-            obj.ContactNo = txtContactNo.Text;
-            obj.Gender = comboGender.SelectedItem.ToString();
-            obj.Course = comboCourse.SelectedItem.ToString();
-            obj.Add(obj);
-            BindGrid();
-            Clear();
+            
+            emptyFieldValidator();
+            if (comboGender.SelectedIndex != -1 && comboCourse.SelectedIndex != -1)
+            {
+                Student obj = new Student();
+                string firstName = txtFirstName.Text;
+                string lastName = txtLastName.Text;
+                obj.Name = firstName + " " + lastName;
+                obj.Address = txtAddress.Text;
+                obj.Email = txtEmail.Text;
+                obj.EnrollDate = dateEnrolDate.Value;
+                obj.ContactNo = txtContactNo.Text;
+                obj.Gender = comboGender.SelectedItem.ToString();
+                obj.Course = comboCourse.SelectedItem.ToString();
+                obj.Add(obj);
+                BindGrid();
+                Clear();
+            }            
         }
 
         private void dataGridStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -203,6 +208,106 @@ namespace CourseWork
 
         }
 
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+
+            panelSelector.Height = btnReport.Height;
+            panelSelector.Top = btnReport.Top;
+            panelChart.Visible = false;
+            panelStudent.Visible = false;
+            panelReport.Visible = true;
+            panelReport.BringToFront();
+
+
+        }
+
+        private void btnSortByName_Click(object sender, EventArgs e)
+        {
+            Student obj = new Student();
+            List<Student> listStudents = obj.List();
+            int a = listStudents.Count;
+            for (int i = 0; i < a - 1; i++)
+            {
+                for (int j = i + 1; j < a; j++)
+                {
+
+                    if (listStudents[i].Name.CompareTo(listStudents[j].Name) > 0)
+                    {
+                        Student temp = listStudents[i];
+                        listStudents[i] = listStudents[j];
+                        listStudents[j] = temp;
+                    }
+                }
+
+                DataTable dt = Utility.ConvertToDataTable(listStudents);
+                dataGridStudents.DataSource = dt;
+            }
+        }
+
+        private void btnSortByDate_Click(object sender, EventArgs e)
+        {
+            Student obj = new Student();
+            List<Student> listStudents = obj.List();
+
+            int a = listStudents.Count;
+            for (int i = 0; i < a - 1; i++)
+            {
+                for (int j = i + 1; j < a; j++)
+                {
+                    if (listStudents[i].EnrollDate > listStudents[j].EnrollDate)
+                    {
+                        Student temp = listStudents[i];
+                        listStudents[i] = listStudents[j];
+                        listStudents[j] = temp;
+                    }
+                }
+                DataTable dt = Utility.ConvertToDataTable(listStudents);
+                dataGridStudents.DataSource = dt;
+            }
+        }
+
+        private void btnGenerateReport_Click(object sender, EventArgs e)
+        {
+            Student obj = new Student();
+            DateTime inputDate = dpReport.Value;
+            List<Student> listStudents = obj.List();
+            DateTime[] datearray = obj.week(inputDate);
+            List<Student> studentrep = obj.week(datearray, listStudents);
+            var result = studentrep
+                .GroupBy(s => s.Course)
+                .Select(cs => new
+                {
+                    Course = cs.First().Course,
+                    EnrolledStudents = cs.Count().ToString()
+
+                }).ToList();
+            DataTable d = Utility.ConvertToDataTable(result);
+            dataGridReport.DataSource = d;
+            dataGridReport.CurrentCell = null;
+        }
+
+        //Validating Begin
+
+        private void emptyFieldValidator()
+        {
+            if (string.IsNullOrWhiteSpace(txtFirstName.Text) ||
+                string.IsNullOrWhiteSpace(txtLastName.Text) ||
+                string.IsNullOrWhiteSpace(txtAddress.Text) ||
+                string.IsNullOrWhiteSpace(txtEmail.Text) ||
+                string.IsNullOrWhiteSpace(txtContactNo.Text)
+                )
+            {
+                MessageBox.Show("Please fill all empty fields before submitting!");
+            }
+            else if (comboGender.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please fill all empty fields before submitting!");
+            }
+            else if (comboCourse.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please fill all empty fields before submitting!");
+            }
+        }
         private void txtFirstName_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtFirstName.Text))
@@ -211,10 +316,6 @@ namespace CourseWork
                 txtFirstName.Focus();
                 fnameErrorProvider.SetError(txtFirstName, "Required!");
             }
-            //else if ()
-            //{
-
-            //}
             else
             {
                 e.Cancel = false;
@@ -345,84 +446,6 @@ namespace CourseWork
             errorMessage = "Email address must be valid email address format.\n" +
                "For example 'someone@example.com' ";
             return false;
-        }
-
-        private void btnReport_Click(object sender, EventArgs e)
-        {
-
-            panelSelector.Height = btnReport.Height;
-            panelSelector.Top = btnReport.Top;
-            panelChart.Visible = false;
-            panelStudent.Visible = false;
-            panelReport.Visible = true;
-            panelReport.BringToFront();
-
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Student obj = new Student();
-            DateTime inputDate = dpReport.Value;
-            List<Student> listStudents = obj.List();
-            DateTime[] datearray = obj.week(inputDate);
-            List<Student> studentrep = obj.week(datearray, listStudents);
-            var result = studentrep
-                .GroupBy(s => s.Course)
-                .Select(cs => new
-                {
-                    Course = cs.First().Course,
-                    EnrolledStudents = cs.Count().ToString()
-
-                }).ToList();
-            DataTable d = Utility.ConvertToDataTable(result);
-            dataGridReport.DataSource = d;
-            dataGridReport.CurrentCell = null;
-        }
-
-        private void btnSortByName_Click(object sender, EventArgs e)
-        {
-            Student obj = new Student();
-            List<Student> listStudents = obj.List();
-            int a = listStudents.Count;
-            for (int i = 0; i < a - 1; i++)
-            {
-                for (int j = i + 1; j < a; j++)
-                {
-
-                    if (listStudents[i].Name.CompareTo(listStudents[j].Name) > 0)
-                    {
-                        Student temp = listStudents[i];
-                        listStudents[i] = listStudents[j];
-                        listStudents[j] = temp;
-                    }
-                }
-
-                DataTable dt = Utility.ConvertToDataTable(listStudents);
-                dataGridStudents.DataSource = dt;
-            }
-        }
-
-        private void btnSortByDate_Click(object sender, EventArgs e)
-        {
-            Student obj = new Student();
-            List<Student> listStudents = obj.List();
-
-            int a = listStudents.Count;
-            for (int i = 0; i < a - 1; i++)
-            {
-                for (int j = i + 1; j < a; j++)
-                {
-                    if (listStudents[i].EnrollDate > listStudents[j].EnrollDate)
-                    {
-                        Student temp = listStudents[i];
-                        listStudents[i] = listStudents[j];
-                        listStudents[j] = temp;
-                    }
-                }
-                DataTable dt = Utility.ConvertToDataTable(listStudents);
-                dataGridStudents.DataSource = dt;
-            }
         }
     }
 }
